@@ -270,6 +270,8 @@ to the GitHub repository for this lab
 and paste the two links below this question.
 ```
 
+<https://github.com/pengzh313/dsci_521_lab4_pengzh01.git>
+
 <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_pengzh01.git>
 
 ```{block, type="alert alert-info"}
@@ -289,7 +291,9 @@ rubric={mechanics:6}
    Paste a link to these files as your answer below.
 ```
 
-YOUR ANSWER GOES HERE
+<https://github.com/pengzh313/dsci_521_lab4_pengzh01.git>
+
+The document with name of "basic_R_operations".
 
 ```{block, type="alert alert-info"}
 #### Question 9 (Optional)
@@ -303,7 +307,7 @@ rubric={mechanics:1,reasoning:1}
    What do you see? How is it rendered?
 ```
 
-YOUR ANSWER GOES HERE
+After clicking the '.md' file in the github, it has a view similar as a html file because a temporary html file was created for preview in the github.
 
 ```{block, type="alert alert-info"}
 #### Question 10

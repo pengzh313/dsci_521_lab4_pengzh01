@@ -1,0 +1,107 @@
+---
+title: "Presentation-Basic R Operations"
+subtitle: "Create dataframe & Select & Filter & Mutate"  
+author: 
+  - "Peng Zhang"
+date: 'October 1, 2022'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+## Introduction
+
+This presentation is to demonstrate how to create a dataframe in **R** and perform a few simple operations.
+
+
+### Create a new dataframe
+
+We can create a dataframe from the below code:
+```{r create_df}
+df <- data.frame(name = c('John', 'Ty', 'Jim'),
+                 age = c(21, 30, 45),
+                 title = c('Estimator', 'Engineer', 'Manager'))
+df
+```
+
+
+---
+name: 
+
+### Operations on dataframe
+
+We can select a particular column and output the specified column only.
+```{r select}
+# load necessary library
+library(tidyverse)
+
+df_1 <- df |> select(title)
+df_1
+```
+
+
+---
+name: 
+
+### Operations on dataframe
+
+We can filter the dataframe based on a certain condition. 
+In the following example, it will only output people with their age over 30.
+
+```{r filter}
+df_2 <- df |> filter(age >30)
+df_2
+```
+
+
+
+---
+name: 
+
+### Operations on dataframe
+
+We can also add a new column in the dataframe. 
+In the following example, we have added division information.
+
+```{r mutate}
+df_3 <- df |> mutate(division = c('I', 'II', 'III'))
+df_3
+```
+
+
+
+---
+class: center, middle
+
+## Last Advise: Practice, Practice, and Practice ...
+# Thanks!
+
+Slides created for MDS DSCI 521 Course Lab4

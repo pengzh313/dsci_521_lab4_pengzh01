@@ -2,7 +2,7 @@
 title: "Lab4_Question 7"
 author: "Peng Zhang"
 date: "2022-10-01"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}

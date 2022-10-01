@@ -2,29 +2,43 @@
 title: "Lab4_Question 7"
 author: "Peng Zhang"
 date: "2022-10-01"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This report is to demonstrate how to create a dataframe in R and do a few simple operations.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Create a new dataframe
 
-```{r cars}
-summary(cars)
+We can create a toy dataframe from the below code:
+
+```{r create_df}
+df <- data.frame(name = c('John', 'Ty', 'Jim'),
+                 age = c(21, 30, 45),
+                 title = c('Estimator', 'Engineer', 'Manager'))
+df
 ```
 
-## Including Plots
+## Operations on dataframe
 
-You can also embed plots, for example:
+We can select a particular column and output the specified column only.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r select}
+# load necessary library
+library(tidyverse)
+
+df_1 <- df |> select(title)
+df_1
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+We can filter the dataframe based on a certain condition. In the following example, it will only output people with their age over 30.
+
+```{r filter}
+df_2 <- df |> filter(age >30)
+df_2
+```
