@@ -1,5 +1,7 @@
 ---
 title: "Lab 4 - Introduction to RStudio and R Markdown. Presentations"
+author: "Peng Zhang"
+date: "October 1, 2022"
 output:
   html_document:
     toc: true
@@ -226,7 +228,10 @@ and edit it so that you include an `author` (yourself) and a `date` (lab due dat
 Include what you added below here as well as a fenced Markdown code block.
 ```
 
-YOUR ANSWER GOES HERE
+    ```{block, YAML_modification}
+    author: "Peng Zhang"
+    date: "October 1, 2022"
+    ```
 
 ### Creating R Markdown documents
 
