@@ -270,7 +270,7 @@ to the GitHub repository for this lab
 and paste the two links below this question.
 ```
 
-YOUR ANSWER GOES HERE
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_pengzh01.git>
 
 ```{block, type="alert alert-info"}
 #### Question 8
