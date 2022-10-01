@@ -1,0 +1,44 @@
+---
+title: "Lab4_Question 7"
+author: "Peng Zhang"
+date: "2022-10-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+This report is to demonstrate how to create a dataframe in R and do a few simple operations.
+
+## Create a new dataframe
+
+We can create a toy dataframe from the below code:
+
+```{r create_df}
+df <- data.frame(name = c('John', 'Ty', 'Jim'),
+                 age = c(21, 30, 45),
+                 title = c('Estimator', 'Engineer', 'Manager'))
+df
+```
+
+## Operations on dataframe
+
+We can select a particular column and output the specified column only.
+
+```{r select}
+# load necessary library
+library(tidyverse)
+
+df_1 <- df |> select(title)
+df_1
+```
+
+We can filter the dataframe based on a certain condition. In the following example, it will only output people with their age over 30.
+
+```{r filter}
+df_2 <- df |> filter(age >30)
+df_2
+```
