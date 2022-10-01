@@ -528,7 +528,24 @@ Don’t forget to knit/render the document after you make this change to
 ensure everything is still working.
 </p>
 </div>
-<p>YOUR ANSWER GOES HERE</p>
+<pre class="r"><code># define a function to calculate variance from a numerical vector
+# below code from the exercise 3 of my lab3 assignment (DSCI 523 course)
+variance &lt;- function(x) {
+    if (!is.numeric(x)){
+        stop(&quot;Cannot take inputs for non-numerical values&quot;)
+    }    
+    sum &lt;- 0
+    for (i in x) {
+        sum &lt;- sum + i
+    }
+    mean &lt;- sum/length(x)
+    
+    sum_diff &lt;- 0
+    for (j in x) {
+        sum_diff &lt;- sum_diff + (j - mean)**2
+    }
+    round((sum_diff / (length(x) - 1)), 2)
+}</code></pre>
 <div class="alert alert-info">
 <h4 id="question-4">
 Question 4
@@ -541,7 +558,7 @@ Create a new code chunk that uses a code chunk option. Write out in your
 own words what the code chunk option is doing.
 </p>
 </div>
-<p>YOUR ANSWER GOES HERE</p>
+<pre><code>## [1] 166.67</code></pre>
 <div id="multiple-code-chunk-options" class="section level4">
 <h4>Multiple code chunk options</h4>
 <p>To have multiple code chunk options you separate them by a comma. For
@@ -562,7 +579,7 @@ least one must be different to the ones mentioned above. Write in your
 own words what each code chunk option is doing.
 </p>
 </div>
-<p>YOUR ANSWER GOES HERE</p>
+<pre><code>this is [1] 166.67</code></pre>
 </div>
 </div>
 <div id="yaml-header-and-document-output-options" class="section level3">
